@@ -3,6 +3,7 @@ package com.demoqa;
 import com.codeborne.selenide.Selenide;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,6 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+@Tag("systemProperties")
 public class TestRegistrationFormPageWithFaker extends TestSetup {
 
     Faker faker = new Faker();
@@ -31,6 +33,7 @@ public class TestRegistrationFormPageWithFaker extends TestSetup {
             city = "Karnal";
 
     @Test
+    @Tag("demoqa")
     @DisplayName("Successful fill registration form")
     void fillFormTest() {
         step("Open registration form", () -> {
