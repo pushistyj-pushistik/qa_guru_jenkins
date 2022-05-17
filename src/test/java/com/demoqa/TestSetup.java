@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class TestSetup {
     static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
 
-    static String browser = System.getProperty("browser", "safari");
+    static String browser = System.getProperty("browser", "chrome");
     static String browserSize = System.getProperty("browserSize", "1920x1080");
 
     @BeforeAll
