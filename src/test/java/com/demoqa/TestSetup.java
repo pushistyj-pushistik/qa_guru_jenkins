@@ -18,7 +18,7 @@ public class TestSetup {
 
     static String browser = System.getProperty("browser", "chrome");
     static String browserSize = System.getProperty("browserSize", "1920x1080");
-    static String selenoidUrl = System.getProperty("url", "selenoid.autotests.cloud/wd/hub");
+    static String selenoidUrl = System.getProperty("selenoidUrl", "selenoid.autotests.cloud/wd/hub");
 
     @BeforeAll
     static void setUp() {
