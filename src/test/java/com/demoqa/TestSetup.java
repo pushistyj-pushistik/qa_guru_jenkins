@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class TestSetup {
     static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
 
+    static String baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
     static String browser = System.getProperty("browser", "chrome");
     static String browserSize = System.getProperty("browserSize", "1920x1080");
     static String selenoidUrl = System.getProperty("selenoidUrl", "selenoid.autotests.cloud/wd/hub");
@@ -24,7 +25,7 @@ public class TestSetup {
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = baseUrl;
         Configuration.browser = browser;
         Configuration.browserSize = browserSize;
         Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + selenoidUrl;
