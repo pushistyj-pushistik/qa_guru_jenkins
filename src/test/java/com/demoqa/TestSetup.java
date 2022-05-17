@@ -18,6 +18,7 @@ public class TestSetup {
 
     static String browser = System.getProperty("browser", "chrome");
     static String browserSize = System.getProperty("browserSize", "1920x1080");
+    static String selenoidUrl = System.getProperty("url", "selenoid.autotests.cloud/wd/hub");
 
     @BeforeAll
     static void setUp() {
@@ -26,7 +27,7 @@ public class TestSetup {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = browser;
         Configuration.browserSize = browserSize;
-        Configuration.remote = "https://" + config.login() + ":" + config.password() + "@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = "https://" + config.login() + ":" + config.password() + "@" + selenoidUrl;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
