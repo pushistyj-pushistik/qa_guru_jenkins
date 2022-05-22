@@ -1,7 +1,7 @@
 curl -X POST \
      -H 'Content-Type: application/json' \
      -d '{"chat_id": "-1001417831835", "text": "Im a hackergirl", "disable_notification": false}' \
-     https://api.telegram.org/bot5343379879:AAHipsWiS-U5OH1fPAIb4j6TCOCtM8nqZAQ/sendMessage
+     https://api.telegram.org/botXXX/sendMessage
 
 
      java \
@@ -9,9 +9,3 @@ curl -X POST \
      -jar allure-notifications-4.1.jar
 
       java "-DconfigFile=notifications/telegram.json" -jar allure-notifications-4.1.jar
-
-      echo 'export PATH="/usr/local/opt/gradle@6/bin:$PATH"'
-      echo 'export PATH="/usr/local/opt/gradle@6/bin:$PATH"' >> ~/.zshrc
-      /usr/local/Cellar/gradle/6.9.2/libexec
-      /usr/local/Cellar/gradle@6/6.9.2/libexec
-      /usr/local/Cellar/gradle@6/6.9.2/libexec
